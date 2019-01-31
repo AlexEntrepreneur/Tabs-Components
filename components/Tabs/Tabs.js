@@ -1,3 +1,12 @@
+class Tabs {
+  constructor() {
+    this.links = document.querySelectorAll('.tabs-link');
+  }
+
+  init(){
+    this.links.forEach(link => new TabLink(link));
+  }
+}
 
 class TabLink {
   constructor(element) {
@@ -61,5 +70,4 @@ class TabItem {
 - In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
 
 */
-
-links = document.querySelectorAll('.tabs-link').forEach(link => new TabLink(link));
+new Tabs().init();
