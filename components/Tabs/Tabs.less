@@ -3,14 +3,17 @@
   .tabs-items {
     width: 100%;
     height: 300px;
-    display: flex;
-    justify-content: center;
-    padding-top: 60px;
+    position: relative;
   }
   .tabs-item {
-    display: none; 
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    padding: 6% 13%;
+    width: 100%;
 
-    width: 75%;
     .tabs-item-title {
       font-size: 24px;
       font-weight: bold;
@@ -18,7 +21,9 @@
     }
   }
   .tabs-item-selected {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 500ms ease-in-out;
   }
 
   .tabs-links {
@@ -47,5 +52,3 @@
     }
   }
 }
-
-
